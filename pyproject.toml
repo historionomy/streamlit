@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "world-map"
+version = "0.1.0"
+description = ""
+authors = ["Terah <terah.dev@gmail.com>"]
+readme = "README.md"
+packages = [{include = "world_map"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.2"
+pandas = "^2.1.4"
+geopandas = "^0.14.1"
+matplotlib = "^3.8.2"
+descartes = "^1.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
