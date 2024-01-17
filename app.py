@@ -116,4 +116,4 @@ data = prepare_data(shapefile, raw_data)
 
 plot = make_plot(data, legend, lang)
 
-st.pyplot(plot, dpi=600)
+st.pyplot(plot, dpi=300)
