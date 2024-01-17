@@ -76,11 +76,10 @@ def make_plot(data, legend, lang):
         if subEntities:
             data.iloc[[idx]].plot(ax=ax, facecolor=baseColor, edgecolor='black', hatch='.')
 
-    date = datetime.now().strftime("%d %b %Y")
     if lang == 'FR':
-        title = f"Carte Historionomique Mondiale - {date}"
+        title = f"Carte Historionomique Mondiale"
     else:
-        title = f"Historionomic World Map - {date}"
+        title = f"Historionomic World Map"
 
     ax.set_title(title, fontsize=30, color='black')
     ax.set_axis_off()
