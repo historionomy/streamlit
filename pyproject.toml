@@ -13,6 +13,8 @@ pandas = "^2.1.4"
 geopandas = "^0.14.1"
 matplotlib = "^3.8.2"
 descartes = "^1.1.0"
+streamlit = "^1.30.0"
+plotly = "^5.18.0"
 
 
 [tool.poetry.group.dev.dependencies]
