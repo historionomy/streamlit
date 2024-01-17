@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from datetime import datetime
 
-
+st.set_page_config(layout="wide")
 @st.cache_resource
 def load_world_map():
     return gpd.read_file('ne_110m_admin_0_countries_lakes/ne_110m_admin_0_countries_lakes.shp')[
@@ -51,11 +51,7 @@ def prepare_data(_shapefile, raw_data):
     return data
 
 
-@st.cache_resource
-def make_plot(_data, legend, lang):
-    # _ needed for cache
-    data = _data
-
+def make_plot(data, legend, lang):
     # Plot
     fig, ax = plt.subplots(1, 1, figsize=(28, 14))
 
@@ -120,4 +116,4 @@ data = prepare_data(shapefile, raw_data)
 
 plot = make_plot(data, legend, lang)
 
-st.pyplot(plot)
+st.pyplot(plot, dpi=600)
